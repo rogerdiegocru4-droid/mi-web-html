@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Para Mamá con Amor</title>
+    <style>
+        body {
+            font-family: 'Arial Rounded MT Bold', Arial, sans-serif;
+            background-color: #fff0f3;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            overflow: hidden;
+        }
+
+        .contenedor-mensaje {
+            display: none;
+            max-width: 500px;
+            width: 90%;
+            background: white;
+            padding: 40px;
+            border-radius: 30px;
+            text-align: center;
+            box-shadow: 0px 10px 25px rgba(255, 105, 180, 0.2);
+            border: 2px solid #ffb6c1;
+            animation: aparecer 0.6s ease-out;
+        }
+
+        .activa { display: block; }
+
+        @keyframes aparecer {
+            from { opacity: 0; transform: translateY(20px) scale(0.9); }
+            to { opacity: 1; transform: translateY(0) scale(1); }
+        }
+
+        h1 { color: #d81b60; font-size: 1.8rem; }
+        
+        p {
+            font-size: 1.3rem;
+            color: #444;
+            line-height: 1.5;
+            font-style: italic;
+        }
+
+        .corazon {
+            font-size: 50px;
+            color: #ff4081;
+            margin-bottom: 10px;
+        }
+
+        .btn-siguiente {
+            background-color: #ff4081;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            margin-top: 25px;
+            box-shadow: 0px 4px 0px #c2185b;
+            transition: 0.2s;
+        }
+
+        .btn-siguiente:active {
+            transform: translateY(3px);
+            box-shadow: none;
+        }
+
+        footer {
+            position: fixed;
+            bottom: 20px;
+            color: #ad1457;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+   
+    <div id="m1" class="contenedor-mensaje activa">
+        <div class="corazon">🌸</div>
+        <h1>¡Hola, Mamá!</h1>
+        <p>"Mami, hoy te quiero agradecer  por todo lo que haces por mí cada día. A veces no lo digo mucho, pero de verdad valoro cada esfuerzo que haces por mi y mis hermanas. Eres una persona muy fuerte y siempre estás cuando te necesito. Te quiero mucho y espero que hoy sea un día muy especial para ti."</p>
+        <button class="btn-siguiente" onclick="siguiente('m1', 'm2')">Presiona aquí ✨</button>
+    </div>
+
+   
+    <div id="m2" class="contenedor-mensaje">
+        <div class="corazon">💝</div>
+        <h1>Mi Refugio</h1>
+        <p>"Para mi eres un ejemplo a seguir, porque siempre luchas por salir adelante y nunca te rindes. Gracias por cuidarme, aconsejarme y darme todo tú amor. Prometo seguir esforzándome para que te sientas orgullosa de mí.
+."</p>
+        <button class="btn-siguiente" onclick="siguiente('m2', 'm3')">Sigue leyendo ❤️</button>
+    </div>
+
+ 
+    <div id="m3" class="contenedor-mensaje">
+        <div class="corazon">⭐</div>
+        <h1>Eres Única</h1>
+        <p>"Para mí eres la mejor del mundo. No importa si hay peleas, siempre encuentro en ti el apoyo que necesito y cariño. Me gusta pasar tiempo contigo y aprender de todo lo que me enseñas. Gracias por ser tan especial en mi vida.."</p>
+        <button class="btn-siguiente" onclick="siguiente('m3', 'm4')">Hay más... 🌹</button>
+    </div>
+
+  
+    <div id="m4" class="contenedor-mensaje">
+        <div class="corazon">☀️</div>
+        <h1>Mi Luz</h1>
+        <p>"En este día, quiero recordarte lo importante que eres para mí. Eres mi guía, mi apoyo y mi alegría. Gracias por no dejarme sola y por quererme tal como soy.."</p>
+        <button class="btn-siguiente" onclick="siguiente('m4', 'm5')">Un poquito más 🎁</button>
+    </div>
+
+
+    <div id="m5" class="contenedor-mensaje">
+        <div class="corazon">🌻</div>
+        <h1>Tu Sonrisa</h1>
+        <p>"Mamá, gracias por ser mi refugio y por enseñarme que con amor y esfuerzo todo es posible. No solo eres mi madre, eres mi mayor ejemplo de vida."</p>
+        <button class="btn-siguiente" onclick="siguiente('m5', 'm6')">El mensaje final 💌</button>
+    </div>
+
+    <div id="m6" class="contenedor-mensaje">
+        <div class="corazon">💖</div>
+        <h1>¡Te Amo!</h1>
+        <p>Para la mujer más increíble de mi vida, gracias por todo tu amor y sacrificio. ¡Te amo, mamá!"</p>
+        <button class="btn-siguiente" onclick="siguiente('m6', 'm1')">Volver a leer 🏠</button>
+    </div>
+
+    <footer>
+        Diseñado por: Kiara Rodriguez
+    </footer>
+
+    <script>
+        function siguiente(actualId, siguienteId) {
+            // Ocultamos el actual
+            document.getElementById(actualId).classList.remove('activa');
+            // Mostramos el siguiente
+            document.getElementById(siguienteId).classList.add('activa');
+        }
+    </script>
+
+</body>
+</html>
